@@ -39,6 +39,7 @@ console.log (version);
 
 const fwname = "full_robot-1.0.9.28777-dev.ota".slice( 11, -4);
 console.log( 'this one is from dev branch '+fwname);
+console.log( 'this one is from dev branch and modified in old repo');
 
 
 /*
