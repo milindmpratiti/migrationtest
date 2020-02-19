@@ -1,0 +1,50 @@
+{
+  "name": "bissell-iot-platform",
+  "version": "0.0.0",
+  "license": "Client shall have an irrevocable, royalty-free and perpetual license to use for the purpose for which it is made available to Client in accordance with the Services and the applicable SOW any of OST’s Pre-Existing IP and Independently Developed IP that is incorporated into any material, work product, document, data or other deliverable developed or provided by OST in connection with any Services provided to Client (“Deliverables”).  Client may not (a) reproduce or use Preexisting IP or Independently Developed IP other than as components of the Deliverables, (b) distribute Preexisting IP or Independently Developed IP, or sublicense any rights in Preexisting IP or Independently Developed IP to third parties other than in support of Client’s internal business operations.",
+  "private": true,
+  "description": "Data ingest endpoints",
+  "scripts": {
+    "test": "jest",
+    "deploy-client": "node ./scripts/deploy/client.js",
+    "remove-client": "node ./scripts/remove/client.js",
+    "deploy-function": "node ./scripts/deploy/function.js",
+    "pipeline-factory": "node ./scripts/deploy/pipeline-factory.js",
+    "post-deploy": "node ./scripts/deploy/post-deploy.js",
+    "deploy-service": "node ./scripts/deploy/service.js",
+    "ssm-secure-parameters": "node ./scripts/deploy/ssm-secure-parameters.js",
+    "copy-table": "node ./scripts/migration_tool/migrate-dynamo.js",
+    "copy-bucket": "node ./scripts/migration_tool/migrate-s3.js",
+    "releases": "node ./scripts/deploy/releases.js"
+  },
+  "devDependencies": {
+    "actions-on-google": "^2.8.0",
+    "archiver-promise": "^1.0.0",
+    "aws-sdk-mock": "^2.0.0",
+    "aws-xray-sdk": "^2.2.0",
+    "bluebird": "^3.5.5",
+    "copy-dynamodb-table": "^2.0.17",
+    "eslint": "^4.19.1",
+    "got": "^9.2.2",
+    "jest": "^23.5.0",
+    "lodash.filter": "^4.6.0",
+    "lodash.flatten": "^4.4.0",
+    "lodash.map": "^4.6.0",
+    "luxon": "^1.16.0",
+    "minimist": "^1.2.0",
+    "shelljs": "^0.8.2",
+    "simple-encryptor": "^2.0.0",
+    "waait": "^1.0.5"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.0",
+    "crypto": "^1.0.1",
+    "csv-parser": "2.3.0",
+    "dynamodb": "^1.2.1",
+    "fs": "0.0.1-security",
+    "npm": "^6.13.6",
+    "serverless-aws-documentation": "^1.1.0",
+    "upath": "^1.2.0",
+    "uuid": "^3.3.0"
+  }
+}
